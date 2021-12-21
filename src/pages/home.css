@@ -1,0 +1,24 @@
+body {
+  background-color: whitesmoke;
+}
+
+@media only screen and (min-width: 600px) {
+  .Product {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .Product {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .Product {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+}

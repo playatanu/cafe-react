@@ -1,5 +1,4 @@
 import "../components/searchBox.css";
-
 import { useDispatch } from "react-redux";
 import { searchText } from "../actions";
 
@@ -12,7 +11,10 @@ const SerachBox = () => {
 
   return (
     <>
-      <input className="searchbar" type="text" onChange={serchtext} />
+      <div className=""></div>
+      <div className="px-10 py-10">
+        <input className="searchbar" type="text" onChange={serchtext} />
+      </div>
     </>
   );
 };

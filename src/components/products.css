@@ -12,13 +12,13 @@ body {
 @media only screen and (min-width: 800px) {
   .Product {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .Product {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
   }
 }

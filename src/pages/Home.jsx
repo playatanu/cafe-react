@@ -1,57 +1,15 @@
-import "./home.css";
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import ProductCard from "../components/ProductCard";
+import NavBar from "../components/NavBar";
 import SerachBox from "../components/SearchBox";
-import { productsList } from "../actions";
-
+import Products from "../components/Products";
+import { useSelector } from "react-redux";
 const Home = () => {
-  const products = useSelector((state) => state.productsList);
-  const searchText = useSelector((state) => state.searchText);
-  const despatch = useDispatch();
-  const cart = useSelector((state) => state.cartList);
-
-  const getProducts = async () => {
-    const url = "http://localhost:8080/products";
-    fetch(url)
-      .then((response) => response.json())
-      .then((json) => {
-        despatch(productsList(json));
-        console.log(json);
-      });
-  };
-
-  React.useEffect(() => {
-    getProducts();
-  });
-
+  const cart = useSelector((state) => state.cartList.length);
   return (
     <>
+      <NavBar />
       <SerachBox />
-      {cart.length}
-      <div className="Product">
-        {products
-          .filter((val) => {
-            if (searchText == "") {
-              return val;
-            } else if (
-              val.NAME.toLowerCase().includes(searchText.toLowerCase())
-            ) {
-              return val;
-            }
-          })
-          .map((val) => {
-            return (
-              <ProductCard
-                key={val._id}
-                dec={val.DEC}
-                price={val.PRICE}
-                name={val.NAME}
-                image={val.IMAGE}
-              />
-            );
-          })}
-      </div>
+      <Products />
     </>
   );
 };

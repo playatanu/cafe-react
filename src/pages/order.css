@@ -1,0 +1,13 @@
+details {
+}
+
+summary {
+}
+
+details[open] {
+  border-bottom: 1px solid #000000;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #000000;
+}

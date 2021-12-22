@@ -14,7 +14,14 @@ export const productsList = (value) => {
 
 export const cartList = (value) => {
   return {
-    type: "SHOWCART",
+    type: "CART",
+    payload: value,
+  };
+};
+
+export const cartLength = (value) => {
+  return {
+    type: "CARTLENGTH",
     payload: value,
   };
 };

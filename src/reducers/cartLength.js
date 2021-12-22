@@ -1,6 +1,6 @@
-const cartList = (state = [], action) => {
+const cartLength = (state = "Atanu", action) => {
   switch (action.type) {
-    case "CART":
+    case "CARTLENGTH":
       return (state = action.payload);
 
     default:
@@ -8,4 +8,4 @@ const cartList = (state = [], action) => {
   }
 };
 
-export default cartList;
+export default cartLength;

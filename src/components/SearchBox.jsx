@@ -12,8 +12,12 @@ const SerachBox = () => {
   return (
     <>
       <div className=""></div>
-      <div className="px-10 py-10">
-        <input className="searchbar" type="text" onChange={serchtext} />
+      <div className="px-10 py-10 ">
+        <input
+          className="bg-white searchbar w-[100%] h-[30px] rounded"
+          type="text"
+          onChange={serchtext}
+        />
       </div>
     </>
   );

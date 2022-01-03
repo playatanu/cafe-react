@@ -1,8 +1,6 @@
-import "../components/productCard.css";
 import { useDispatch, useSelector } from "react-redux";
 import { cartList, cartLength } from "../actions";
 import React from "react";
-import "react-toastify/dist/ReactToastify.css";
 
 const ProductCard = (props) => {
   const dispatch = useDispatch();
@@ -21,8 +19,9 @@ const ProductCard = (props) => {
 
   return (
     <>
-      <div className="container">
+      <div className="bg-white w-40 rounded mx-10 my-10">
         <img
+          className="w-40 h-24 rounded"
           alt="product"
           src={
             props.image === ""
@@ -31,11 +30,14 @@ const ProductCard = (props) => {
           }
         />
 
-        <div className="Container-right">
-          <p className="productName">{props.name}</p>
-          <p className="productDec">₹{props.price}</p>
-          <div onClick={addToCart} className="cartButton">
-            ADD TO CART
+        <div className="mx-2">
+          <p className="">{props.name}</p>
+          <p className="">₹{props.price}</p>
+          <div
+            onClick={addToCart}
+            className="cursor-pointer  hover:bg-black  text-center rounded py-2 my-2 text-[10px] font-bold text-white bg-amber-500"
+          >
+            ADD TO CAR
           </div>
         </div>
       </div>

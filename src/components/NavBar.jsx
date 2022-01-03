@@ -7,7 +7,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="flex py-8 h-20 space-x-4 bg-white justify-between align-baseline">
+      <div className="sticky top-0 flex py-8 h-20 space-x-4 bg-white justify-between align-baseline">
         <div className="px-10">
           <Link to="/">Online Cafe</Link>
         </div>
@@ -17,9 +17,10 @@ const NavBar = () => {
           <Link to="/orders">Orders</Link>
           <Link to="/cart">Cart</Link>
           <Link to="/cart">
-            <i className="fa fa-shopping-cart" aria-hidden="true">
-              {cart.length}
-            </i>
+            <div className="flex item-center rounded bg-amber-500 text-white mx-2 px-5 py-1 ">
+              <i className="fa fa-shopping-cart"></i>
+              <div className="px-2">{cart.length} </div>{" "}
+            </div>
           </Link>
         </div>
       </div>

@@ -7,7 +7,6 @@ import { productsList } from "../actions";
 const Products = () => {
   const products = useSelector((state) => state.productsList);
   const searchText = useSelector((state) => state.searchText);
-
   const despatch = useDispatch();
 
   const getProducts = async () => {
